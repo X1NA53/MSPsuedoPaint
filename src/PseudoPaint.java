@@ -1,7 +1,4 @@
-
-
-
-import java.awt.Color;
+package src;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -20,7 +17,6 @@ public class PseudoPaint {
 
     private static void createAndShowGUI(){
         JFrame frame = new JFrame();
-        frame.setBackground(Color.GRAY);
         frame.add(new PseudoPanel());
         frame.pack();
         frame.setVisible(true);
