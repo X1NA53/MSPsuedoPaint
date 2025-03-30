@@ -14,7 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
 
-class PseudoPanel extends JPanel {
+public class PseudoPanel extends JPanel {
     private BufferedImage img;
     private Graphics2D graphics;
 

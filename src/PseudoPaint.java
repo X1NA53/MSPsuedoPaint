@@ -1,5 +1,7 @@
 package src;
 
+import java.awt.BorderLayout;
+
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -17,6 +19,7 @@ public class PseudoPaint {
 
     private static void createAndShowGUI(){
         JFrame frame = new JFrame();
+        frame.add(new MenuPanel(), BorderLayout.NORTH);
         frame.add(new PseudoPanel());
         frame.pack();
         frame.setVisible(true);
