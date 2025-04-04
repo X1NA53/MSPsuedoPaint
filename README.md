@@ -1,6 +1,7 @@
 A basic paint program written in Java styled after MS Paint
 
 # TODO
-- [ ] Taskbar
-- [ ] Differing Brush Sizes
+- [ x ] Taskbar
 - [ ] Change Brush Colors
+- [ ] Differing Brush Sizes
+- [ ] Highlight Buttons on Click

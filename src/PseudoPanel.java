@@ -5,6 +5,8 @@ import java.awt.image.BufferedImage;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
+
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import java.awt.Point;
 import java.awt.Color;
@@ -13,10 +15,13 @@ import java.awt.BasicStroke;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.SwingUtilities;
 
 public class PseudoPanel extends JPanel {
     private BufferedImage img;
     private Graphics2D graphics;
+
+    private Color brushColor;
 
     private ArrayList<Point> points = new ArrayList<>();
     
@@ -58,7 +63,7 @@ public class PseudoPanel extends JPanel {
             img = new BufferedImage((int) getSize().getWidth(), (int) getSize().getHeight(), BufferedImage.TYPE_INT_ARGB);
             graphics = img.createGraphics();
 
-            graphics.setColor(Color.GRAY);
+            graphics.setColor(mframe.getColor());//TODO FIX
             graphics.setStroke(new BasicStroke(15, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
         }
         
@@ -74,4 +79,6 @@ public class PseudoPanel extends JPanel {
         }
         repaint();
     }
+
+    
 }
