@@ -27,6 +27,7 @@ public class PseudoPanel extends JPanel {
     
     public PseudoPanel(){
         setBackground(Color.BLACK);
+        brushColor = Color.GRAY;
 
 
         addMouseListener(new MouseAdapter() {
@@ -63,7 +64,7 @@ public class PseudoPanel extends JPanel {
             img = new BufferedImage((int) getSize().getWidth(), (int) getSize().getHeight(), BufferedImage.TYPE_INT_ARGB);
             graphics = img.createGraphics();
 
-            graphics.setColor(mframe.getColor());//TODO FIX
+            graphics.setColor(brushColor);
             graphics.setStroke(new BasicStroke(15, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND));
         }
         
@@ -71,6 +72,7 @@ public class PseudoPanel extends JPanel {
     }
 
     public void useBrush(){
+        graphics.setColor(brushColor);
         Point p = points.getFirst();
         graphics.fillOval((int) (p.x - 7.5), (int) (p.y - 7.5), 15, 15);
 
@@ -78,6 +80,14 @@ public class PseudoPanel extends JPanel {
             graphics.drawLine(points.get(i).x, points.get(i).y, points.get(i +1).x, points.get(i + 1).y);
         }
         repaint();
+    }
+
+    public Color getBrushColor(){
+        return brushColor;
+    }
+
+    public void setBrushColor(Color brushColor){
+        this.brushColor = brushColor;
     }
 
     
