@@ -19,6 +19,7 @@ public class PseudoPaint {
     private static void createAndShowGUI(){
         JFrame frame = new JFrame();
         PseudoPanel drawingPanel = new PseudoPanel();
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(drawingPanel);
         frame.add(new MenuPanel(drawingPanel), BorderLayout.NORTH);
         frame.pack();

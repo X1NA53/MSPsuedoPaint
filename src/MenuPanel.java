@@ -6,6 +6,7 @@ import java.awt.Graphics;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -38,13 +39,12 @@ public class MenuPanel extends JPanel {
         public ColorButton(Color color){
             this.color = color;
             setBackground(color);
-            // setBorder(null);
+            setBorder(BorderFactory.createLineBorder(Color.BLACK));
             this.addActionListener(this);
         }
 
         @Override
         public void actionPerformed(ActionEvent e){
-            System.out.println("yo");
             setColor(this.color);
         }
 
