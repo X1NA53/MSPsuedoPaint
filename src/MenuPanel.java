@@ -24,7 +24,6 @@ public class MenuPanel extends JPanel {
 
 
 
-    //TODO AcitonPerformed
     @Override
     public Dimension getPreferredSize(){
         return new Dimension(400, 50);
